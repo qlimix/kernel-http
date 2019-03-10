@@ -1,0 +1,58 @@
+{
+    "name": "qlimix/kernel-http",
+    "type": "library",
+    "license": "LGPL-3.0-only",
+    "authors": [
+        {
+            "name": "Frank",
+            "email": "frank@qlimix.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Qlimix\\Kernel\\Http\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/codesniffer-standard.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/code-standard.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/http.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/kernel.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/dependency-container.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/environment.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "qlimix/code-standard": "dev-master"
+    },
+    "require": {
+        "qlimix/dependency-container": "dev-master",
+        "qlimix/environment": "dev-master",
+        "qlimix/http": "dev-master",
+        "qlimix/kernel": "dev-master",
+        "symfony/debug": "^4.2",
+        "vlucas/phpdotenv": "^3.3"
+    }
+}
