@@ -43,6 +43,8 @@ final class HttpKernel implements KernelInterface
      */
     public function run(): void
     {
+        $this->container->setValue('kernel.project.root', $this->projectRoot);
+
         $this->loadEnvironment();
 
         try {
@@ -72,6 +74,9 @@ final class HttpKernel implements KernelInterface
         }
     }
 
+    /**
+     * @throws KernelException
+     */
     private function loadEnvironment(): void
     {
         $dotEnv = Dotenv::create($this->projectRoot);
