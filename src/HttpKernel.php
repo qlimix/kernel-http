@@ -26,15 +26,20 @@ final class HttpKernel implements KernelInterface
     private $assembler;
 
     /** @var string */
+    private $requestHandlerId;
+
+    /** @var string */
     private $projectRoot;
 
     public function __construct(
         RegistryInterface $container,
         ProviderAssemblerInterface $assembler,
+        string $requestHandlerId,
         string $projectRoot
     ) {
         $this->container = $container;
         $this->assembler = $assembler;
+        $this->requestHandlerId = $requestHandlerId;
         $this->projectRoot = $projectRoot;
     }
 
@@ -101,7 +106,7 @@ final class HttpKernel implements KernelInterface
 
     private function getRequestHandler(): RequestHandlerInterface
     {
-        return $this->container->get(RequestHandlerInterface::class);
+        return $this->container->get($this->requestHandlerId);
     }
 
     private function getServerRequestBuilder(): ServerRequestBuilderInterface
