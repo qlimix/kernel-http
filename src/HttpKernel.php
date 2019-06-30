@@ -4,7 +4,7 @@ namespace Qlimix\Kernel\Http;
 
 use Qlimix\Kernel\Bootstrap\BootstrapInterface;
 use Qlimix\Kernel\Exception\KernelException;
-use Qlimix\Kernel\Http\Http\RequestProcessorInterface;
+use Qlimix\Kernel\Http\Processor\RequestProcessorInterface;
 use Qlimix\Kernel\KernelInterface;
 use Throwable;
 

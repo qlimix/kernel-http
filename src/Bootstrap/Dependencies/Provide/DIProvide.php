@@ -10,16 +10,16 @@ use Throwable;
 final class DIProvide implements ProvideInterface
 {
     /** @var RegistryInterface */
-    private $container;
+    private $registry;
 
     /** @var ProviderCollectionInterface */
     private $collection;
 
     public function __construct(
-        RegistryInterface $container,
+        RegistryInterface $registry,
         ProviderCollectionInterface $collection
     ) {
-        $this->container = $container;
+        $this->registry = $registry;
         $this->collection = $collection;
     }
 
@@ -30,7 +30,7 @@ final class DIProvide implements ProvideInterface
     {
         try {
             foreach ($this->collection->getProviders() as $provider) {
-                $provider->provide($this->container);
+                $provider->provide($this->registry);
             }
         } catch (Throwable $exception) {
             throw new ProvideException('Failed to load DI dependencies', 0, $exception);
