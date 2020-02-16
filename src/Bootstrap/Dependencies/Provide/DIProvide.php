@@ -4,16 +4,15 @@ namespace Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide;
 
 use Qlimix\DependencyContainer\Registry\ProviderCollectionInterface;
 use Qlimix\DependencyContainer\RegistryInterface;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide\Exception\ProvideException;
+use Qlimix\Kernel\Bootstrap\Dependencies\Provide\Exception\ProvideException;
+use Qlimix\Kernel\Bootstrap\Dependencies\Provide\ProvideInterface;
 use Throwable;
 
 final class DIProvide implements ProvideInterface
 {
-    /** @var RegistryInterface */
-    private $registry;
+    private RegistryInterface $registry;
 
-    /** @var ProviderCollectionInterface */
-    private $collection;
+    private ProviderCollectionInterface $collection;
 
     public function __construct(
         RegistryInterface $registry,

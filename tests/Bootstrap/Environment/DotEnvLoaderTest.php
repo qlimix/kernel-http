@@ -6,7 +6,7 @@ use Dotenv\Dotenv;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Qlimix\Kernel\Http\Bootstrap\Environment\DotEnvLoader;
-use Qlimix\Kernel\Http\Bootstrap\Environment\Exception\LoaderException;
+use Qlimix\Kernel\Bootstrap\Environment\Exception\LoaderException;
 use RuntimeException;
 
 final class DotEnvLoaderTest extends TestCase

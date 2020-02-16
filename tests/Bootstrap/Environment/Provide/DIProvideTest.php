@@ -9,7 +9,7 @@ use Qlimix\DependencyContainer\ProviderInterface;
 use Qlimix\DependencyContainer\Registry\ProviderCollectionInterface;
 use Qlimix\DependencyContainer\RegistryInterface;
 use Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide\DIProvide;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide\Exception\ProvideException;
+use Qlimix\Kernel\Bootstrap\Dependencies\Provide\Exception\ProvideException;
 
 final class DIProvideTest extends TestCase
 {

@@ -8,8 +8,7 @@ use Throwable;
 
 final class RequestProcessor implements RequestProcessorInterface
 {
-    /** @var ProviderInterface */
-    private $provider;
+    private ProviderInterface $provider;
 
     public function __construct(ProviderInterface $provider)
     {

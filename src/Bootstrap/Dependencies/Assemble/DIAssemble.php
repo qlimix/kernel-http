@@ -4,14 +4,13 @@ namespace Qlimix\Kernel\Http\Bootstrap\Dependencies\Assemble;
 
 use Qlimix\DependencyContainer\Registry\ProviderAssemblerInterface;
 use Qlimix\DependencyContainer\Registry\ProviderRegistryInterface;
+use Qlimix\Kernel\Bootstrap\Dependencies\Assemble\AssembleInterface;
 
 final class DIAssemble implements AssembleInterface
 {
-    /** @var ProviderAssemblerInterface */
-    private $assembler;
+    private ProviderAssemblerInterface $assembler;
 
-    /** @var ProviderRegistryInterface */
-    private $registry;
+    private ProviderRegistryInterface $registry;
 
     public function __construct(ProviderAssemblerInterface $assembler, ProviderRegistryInterface $registry)
     {

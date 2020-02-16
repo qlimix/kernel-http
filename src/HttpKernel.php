@@ -10,11 +10,9 @@ use Throwable;
 
 final class HttpKernel implements KernelInterface
 {
-    /** @var BootstrapInterface */
-    private $bootstrap;
+    private BootstrapInterface $bootstrap;
 
-    /** @var RequestProcessorInterface */
-    private $processor;
+    private RequestProcessorInterface $processor;
 
     public function __construct(BootstrapInterface $bootstrap, RequestProcessorInterface $processor)
     {

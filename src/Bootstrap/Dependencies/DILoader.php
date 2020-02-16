@@ -2,18 +2,17 @@
 
 namespace Qlimix\Kernel\Http\Bootstrap\Dependencies;
 
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Assemble\AssembleInterface;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Exception\LoaderException;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide\ProvideInterface;
+use Qlimix\Kernel\Bootstrap\Dependencies\Assemble\AssembleInterface;
+use Qlimix\Kernel\Bootstrap\Dependencies\Exception\LoaderException;
+use Qlimix\Kernel\Bootstrap\Dependencies\LoaderInterface;
+use Qlimix\Kernel\Bootstrap\Dependencies\Provide\ProvideInterface;
 use Throwable;
 
 final class DILoader implements LoaderInterface
 {
-    /** @var AssembleInterface */
-    private $assemble;
+    private AssembleInterface $assemble;
 
-    /** @var ProvideInterface */
-    private $provide;
+    private ProvideInterface $provide;
 
     public function __construct(AssembleInterface $assemble, ProvideInterface $provide)
     {

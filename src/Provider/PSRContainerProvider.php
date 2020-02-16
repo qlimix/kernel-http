@@ -11,11 +11,9 @@ use Throwable;
 
 final class PSRContainerProvider implements ProviderInterface
 {
-    /** @var ContainerInterface */
-    private $container;
+    private ContainerInterface $container;
 
-    /** @var string */
-    private $requestHandlerId;
+    private string $requestHandlerId;
 
     public function __construct(ContainerInterface $container, string $requestHandlerId)
     {

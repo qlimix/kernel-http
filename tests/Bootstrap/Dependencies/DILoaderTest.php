@@ -4,12 +4,12 @@ namespace Qlimix\Tests\Kernel\Http\Bootstrap\Dependencies;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Assemble\AssembleInterface;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Assemble\Exception\AssembleException;
+use Qlimix\Kernel\Bootstrap\Dependencies\Assemble\AssembleInterface;
+use Qlimix\Kernel\Bootstrap\Dependencies\Assemble\Exception\AssembleException;
 use Qlimix\Kernel\Http\Bootstrap\Dependencies\DILoader;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Exception\LoaderException;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide\Exception\ProvideException;
-use Qlimix\Kernel\Http\Bootstrap\Dependencies\Provide\ProvideInterface;
+use Qlimix\Kernel\Bootstrap\Dependencies\Exception\LoaderException;
+use Qlimix\Kernel\Bootstrap\Dependencies\Provide\Exception\ProvideException;
+use Qlimix\Kernel\Bootstrap\Dependencies\Provide\ProvideInterface;
 
 final class DILoaderTest extends TestCase
 {

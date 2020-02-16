@@ -3,13 +3,13 @@
 namespace Qlimix\Kernel\Http\Bootstrap\Environment;
 
 use Dotenv\Dotenv;
-use Qlimix\Kernel\Http\Bootstrap\Environment\Exception\LoaderException;
+use Qlimix\Kernel\Bootstrap\Environment\Exception\LoaderException;
+use Qlimix\Kernel\Bootstrap\Environment\LoaderInterface;
 use Throwable;
 
 final class DotEnvLoader implements LoaderInterface
 {
-    /** @var Dotenv */
-    private $dotEnv;
+    private Dotenv $dotEnv;
 
     public function __construct(Dotenv $dotEnv)
     {
